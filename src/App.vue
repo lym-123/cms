@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <div class="header">
-      <div class="title"><i class="fa fa-window-restore"></i>看点咨询精选</div>
+      <div class="title"><i class="fa fa-window-restore"></i>看点资讯精选</div>
       <div class="info">
         <img :src="user.userface" alt="">
         <div class="user">
@@ -188,7 +188,6 @@
     height: 100%;
     border-radius: 5px;
     background-color: #ffffff;
-    padding: .5em;
     overflow-y: auto;
   }
   .left_nav ul {

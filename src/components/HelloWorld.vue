@@ -1,4 +1,59 @@
 <template>
+  <div class="HelloWorld">
+    <div class="block">
+    <el-carousel height="540px">
+      <el-carousel-item  class="image" v-for="(img,index) in imgList" :key="index">
+        <img v-bind:src="img.url">
+      </el-carousel-item>
+    </el-carousel>
+  </div>
+  </div>
+</template>
+
+<script>
+  export default{
+    data(){
+      return{
+        imgList:[
+        {url:require('@/assets/m1.jpg')},
+        {url:require('@/assets/m2.jpg')},
+        {url:require('@/assets/m3.jpg')},
+        {url:require('@/assets/m4.jpg')}
+      ]
+      }
+    }
+  }
+</script>
+
+
+<style>
+
+  .demonstration{
+    text-align: center;
+    color: #6b56a3;
+  }
+  
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 150px;
+    margin: 0;
+  }
+ 
+  .el-carousel__item:nth-child(2n) {
+     background-color: #99a9bf;
+  }
+  
+  .el-carousel__item:nth-child(2n+1) {
+     background-color: #d3dce6;
+  }
+</style>
+
+
+
+
+<!-- <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
@@ -94,7 +149,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+Add "scoped" attribute to limit CSS to this component only
 <style scoped>
 h1, h2 {
   font-weight: normal;
@@ -111,3 +166,4 @@ a {
   color: #42b983;
 }
 </style>
+ -->
